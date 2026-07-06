@@ -1,6 +1,6 @@
-package com.project.FitLink.repository;
+package com.project.FitLink.repository.users;
 
-import com.project.FitLink.entities.UserEntity;
+import com.project.FitLink.entities.users.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
