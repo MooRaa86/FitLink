@@ -1,5 +1,7 @@
 package com.project.FitLink.auditing;
 
+import com.project.FitLink.auth.FitLinkUserDetails;
+import com.project.FitLink.utils.FitLinkUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
@@ -20,6 +22,7 @@ public class AuditorAwareImpl implements AuditorAware<String> {
             return Optional.of("SYSTEM");
         }
 
-        return Optional.of(auth.getName());
+        FitLinkUserDetails user = FitLinkUtils.getCurrentUser();
+        return Optional.of(user.getEmail());
     }
 }

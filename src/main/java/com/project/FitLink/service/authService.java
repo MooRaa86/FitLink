@@ -105,7 +105,7 @@ public class authService {
         }
 
         String newAccessToken = Jwts.builder()
-                .issuer("Omar Medhat")
+                .issuer("FitLink")
                 .subject("ACCESS Token")
                 .issuedAt(new Date())
                 .expiration(new Date(new Date().getTime() + Constants.JWT_ACCESS_TOKEN_EXPIRATION))
